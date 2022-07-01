@@ -41,3 +41,16 @@ function game() {
   const computerSelection = computerPlay();
   console.log(playRound(playerSelection, computerSelection));
 }
+
+function repeat() {
+  for (i = 0; i < 5; i++) {
+    game();
+  }
+  if (userScore == compScore) {
+    console.log("Tie");
+  } else if (userScore > compScore) {
+    console.log("you Won Against the Machine");
+  } else console.log("you lost to the Computer");
+}
+
+repeat();
