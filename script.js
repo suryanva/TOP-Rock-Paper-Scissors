@@ -23,3 +23,12 @@ function playRound(playerSelection, computerSelection) {
     return "You Win! Scissors beats Paper";
   }
 }
+
+function game() {
+  const playerSelection = prompt(
+    "choose:",
+    "Rock,Paper,Scissors"
+  ).toLowerCase();
+  const computerSelection = computerPlay();
+  console.log(playRound(playerSelection, computerSelection));
+}
