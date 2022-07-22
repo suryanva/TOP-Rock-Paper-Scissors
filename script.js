@@ -70,3 +70,18 @@ function playRound(playerSelection, computerSelection) {
     return "You Win! Scissors beats Paper";
   }
 }
+
+function checkWinner() {
+  if (userScore == 5) {
+    outcomeButton.innerText =
+      "YOU ARE THE WINNER, click any button to RESET again";
+  } else if (compScore == 5) {
+    outcomeButton.innerText =
+      "COMPUTER IS THE WINNER, click any button to RESET again";
+  }
+  if (userScore == 6 || compScore == 6) {
+    userScore = 0;
+    compScore = 0;
+    outcomeButton.innerText = "";
+  }
+}
