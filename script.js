@@ -32,25 +32,3 @@ function playRound(playerSelection, computerSelection) {
     return "You Win! Scissors beats Paper";
   }
 }
-
-function game() {
-  const playerSelection = prompt(
-    "choose:",
-    "Rock,Paper,Scissors"
-  ).toLowerCase();
-  const computerSelection = computerPlay();
-  console.log(playRound(playerSelection, computerSelection));
-}
-
-function repeat() {
-  for (i = 0; i < 5; i++) {
-    game();
-  }
-  if (userScore == compScore) {
-    console.log("Tie");
-  } else if (userScore > compScore) {
-    console.log("you Won Against the Machine");
-  } else console.log("you lost to the Computer");
-}
-
-repeat();
